@@ -14,14 +14,14 @@ export const GlobalContextProvider = ({children}) => {
         setSearchTerm(e.target.value)
     }
 
-    useEffect(() => {
-        const productList = obtenerProductos()
-        if(searchTerm != ''){
-            const newProductList = productList.filter(product => product.nombre.toLowerCase().includes(searchTerm.toLowerCase()))
-            setProductos(newProductList)
-        } else {
-            setProductos(productList)
-        }, [searchTerm])
+    // useEffect(() => {
+    //     const productList = obtenerProductos()
+    //     if(searchTerm != ''){
+    //         const newProductList = productList.filter(product => product.nombre.toLowerCase().includes(searchTerm.toLowerCase()))
+    //         setProductos(newProductList)
+    //     } else {
+    //         setProductos(productList)
+    //     }, [searchTerm])
     
 
     const [carrito, setCarrito] = useState(obtenerCarrito())
